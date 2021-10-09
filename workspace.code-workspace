@@ -5,6 +5,9 @@
 		}
 	],
 	"settings": {
-		"prettier.enable": true
+		"prettier.enable": true,
+		"cSpell.words": [
+			"Pressable"
+		]
 	}
 }
