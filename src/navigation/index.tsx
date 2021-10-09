@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { SplashScreen, OnBoardingScreen } from '../screens';
+import { SplashScreen, OnBoardingScreen, SignInScreen } from '../screens';
 const Stack = createStackNavigator();
-
 
 function MainStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="SignInScreen" component={SignInScreen} />
       <Stack.Screen name="OnboardingScreen" component={OnBoardingScreen} />
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="AccountScreen" component={SplashScreen} />
@@ -18,7 +18,6 @@ function MainStack() {
       <Stack.Screen name="OrderAcceptedScreen" component={SplashScreen} />
       <Stack.Screen name="ProductDetailScreen" component={SplashScreen} />
       <Stack.Screen name="SearchScreen" component={SplashScreen} />
-      <Stack.Screen name="SignInScreen" component={SplashScreen} />
     </Stack.Navigator>
   );
 }

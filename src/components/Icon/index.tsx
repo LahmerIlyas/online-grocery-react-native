@@ -3,14 +3,13 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 interface IconProps {
   family?: string;
-  name: string;
 }
 export const Icon: React.FC<IconProps> = (props) => {
   switch (props.family) {
     case 'material': {
-      return <MaterialIcons name={'adjust'} />;
+      return <MaterialIcons name={'adjust'} {...props} />;
     }
     default:
-      return <MaterialIcons name={'16mp'} />;
+      return <MaterialIcons name={'16mp'} {...props} />;
   }
 };

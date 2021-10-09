@@ -9,7 +9,11 @@ import { AlertProvider } from './src/api';
 
 // Define all your fonts below
 const customFonts = {
-  // SFProTextBold: require('./assets/fonts/SF-Pro-Text-Bold.ttf'),
+  GilroyExtraBold: require('./assets/fonts/Gilroy-ExtraBold.ttf'),
+  GilroyRegular: require('./assets/fonts/Gilroy-Regular.ttf'),
+  GilroySemiBold: require('./assets/fonts/Gilroy-SemiBold.ttf'),
+  GilroyMedium: require('./assets/fonts/Gilroy-Medium.ttf'),
+  GilroyLight: require('./assets/fonts/Gilroy-Light.ttf'),
 };
 export default function App() {
   const [loaded, setLoaded] = useState<boolean>(false);

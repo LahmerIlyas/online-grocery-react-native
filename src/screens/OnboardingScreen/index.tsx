@@ -1,15 +1,16 @@
 import React from 'react';
-import { View, StyleSheet, Text, ImageBackground, Pressable } from 'react-native';
+import { View, StyleSheet, Text, ImageBackground, Pressable, Dimensions } from 'react-native';
 import Carrot from '../../../assets/svg/carrot';
 export const OnBoardingScreen: React.FC = () => {
   return (
     <ImageBackground
       source={require('../../../assets/img/on-boarding-background-image.png')}
       style={styles.container}
-    
-      >
-      <Carrot />
-      <Text style={styles.title} numberOfLines={2}>Welcome to our store</Text>
+      imageStyle={styles.image}>
+      <Carrot style={{ marginTop: Dimensions.get('window').height / 2 }} />
+      <Text style={styles.title} numberOfLines={2}>
+        Welcome{'\n'}to our store
+      </Text>
       <Text style={styles.body}>Get your groceries in as fast as one hour</Text>
       <Pressable style={styles.button}>
         <Text style={styles.buttonText}>Get Started</Text>
@@ -25,12 +26,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 35,
   },
+  image: {
+    height: '100%',
+    width: 'auto',
+  },
   title: {
     color: 'white',
-    marginTop: 35,
+    fontFamily: 'GilroySemiBold',
+    fontSize: 48,
+    textAlign: 'center',
+    marginTop: 16,
   },
   body: {
-    color: 'white',
+    color: 'rgba(252, 252, 252, 0.7)',
+    fontSize: 16,
+    fontFamily: 'GilroyMedium',
     marginTop: 19,
   },
   button: {
@@ -43,6 +53,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: 'white'
-  }
+    color: '#FFF9FF',
+    fontSize: 18,
+    fontFamily: 'GilroySemiBold',
+  },
 });
