@@ -10,6 +10,7 @@ import { AlertProvider } from './src/api';
 // Define all your fonts below
 const customFonts = {
   GilroyExtraBold: require('./assets/fonts/Gilroy-ExtraBold.ttf'),
+  GilroyBold: require('./assets/fonts/Gilroy-Bold.ttf'),
   GilroyRegular: require('./assets/fonts/Gilroy-Regular.ttf'),
   GilroySemiBold: require('./assets/fonts/Gilroy-SemiBold.ttf'),
   GilroyMedium: require('./assets/fonts/Gilroy-Medium.ttf'),
