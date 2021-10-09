@@ -34,11 +34,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingTop: 25,
     paddingBottom: 10,
+    marginRight: 15
   },
   image: {
     width: '100%',
     resizeMode: 'contain',
-    height: 100
+    height: 120,
+    minWidth: 120
   },
   title: {
     marginTop: 5,

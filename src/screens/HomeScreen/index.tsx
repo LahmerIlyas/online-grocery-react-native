@@ -23,31 +23,43 @@ export const HomeScreen: React.FC = () => {
         <Text style={styles.sectionTitle}>Exclusive Offer</Text>
         <Text style={styles.sectionExpand}>See all</Text>
       </View>
-      <View style={{ flexDirection: 'row', paddingHorizontal: 25, marginTop: 18 }}>
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 25, marginTop: 18 }}>
         <ProductDetailCard {...exclusiveOffers[0]} />
-        <View style={{ width: 15 }} />
         <ProductDetailCard {...exclusiveOffers[1]} />
-      </View>
+        <ProductDetailCard {...exclusiveOffers[0]} />
+        <ProductDetailCard {...exclusiveOffers[1]} />
+      </ScrollView>
 
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>Best Selling</Text>
         <Text style={styles.sectionExpand}>See all</Text>
       </View>
-      <View style={{ flexDirection: 'row', paddingHorizontal: 25, marginTop: 18 }}>
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 25, marginTop: 18 }}>
         <ProductDetailCard {...bestSelling[0]} />
-        <View style={{ width: 15 }} />
         <ProductDetailCard {...bestSelling[1]} />
-      </View>
+        <ProductDetailCard {...bestSelling[0]} />
+        <ProductDetailCard {...bestSelling[1]} />
+      </ScrollView>
 
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>Groceries</Text>
         <Text style={styles.sectionExpand}>See all</Text>
       </View>
-      <View style={{ flexDirection: 'row', paddingHorizontal: 25, marginTop: 18 }}>
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 25, marginTop: 18 }}>
         <ProductDetailCard {...groceries[0]} />
-        <View style={{ width: 15 }} />
         <ProductDetailCard {...groceries[1]} />
-      </View>
+        <ProductDetailCard {...groceries[0]} />
+        <ProductDetailCard {...groceries[1]} />
+      </ScrollView>
     </ScrollView>
   );
 };
@@ -55,7 +67,7 @@ export const HomeScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    paddingBottom: 25
+    paddingBottom: 25,
   },
   coloredCarrot: {
     alignSelf: 'center',
