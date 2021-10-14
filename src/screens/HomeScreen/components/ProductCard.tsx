@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 5,
     color: '#181725',
-    fontFamily: 'GilroyBold',
+    fontFamily: 'Gilroy-Bold',
     fontSize: 16,
   },
   description: {
