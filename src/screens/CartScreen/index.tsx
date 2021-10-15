@@ -9,8 +9,8 @@ export const CartScreen: React.FC = () => {
     <View style={styles.container}>
       <Text style={styles.header}>My Cart</Text>
       <ScrollView contentContainerStyle={{ marginTop: 35 }}>
-        {data.map((item) => (
-          <CartItemCard {...item} />
+        {data.map((item, index) => (
+          <CartItemCard {...item} key={String(index)} />
         ))}
       </ScrollView>
       <Pressable style={styles.button} android_ripple={{ radius: 200 }}>

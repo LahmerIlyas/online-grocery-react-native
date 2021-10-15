@@ -5,8 +5,8 @@ import { ProductDetailCard } from './components/ProductCard';
 import { data } from './data';
 
 export const ExploreScreen: React.FC = () => {
-  const renderCard = useCallback(({ item }) => {
-    return <ProductDetailCard {...item} />;
+  const renderCard = useCallback(({ item, index }) => {
+    return <ProductDetailCard {...item} key={String(index)} />;
   }, []);
 
   return (

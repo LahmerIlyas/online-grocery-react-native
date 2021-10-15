@@ -5,14 +5,18 @@ import { data } from '../CartScreen/data';
 import { FavoritesCard } from './components/FavoritesCard';
 
 export const FavoritesScreen: React.FC = () => {
-  const renderFavoritesCard = useCallback(({ item }) => {
-    return <FavoritesCard {...item} />;
+  const renderFavoritesCard = useCallback(({ item, index }) => {
+    return <FavoritesCard {...item} key={String(index)} />;
   }, []);
 
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Favorites</Text>
-      <FlatList data={data} renderItem={renderFavoritesCard} />
+      <FlatList
+        data={data}
+        renderItem={renderFavoritesCard}
+        contentContainerStyle={{ marginTop: 32 }}
+      />
       <Pressable style={styles.button}>
         <Text style={styles.buttonText}>Add all to cart</Text>
       </Pressable>
@@ -36,6 +40,8 @@ const styles = StyleSheet.create({
     borderRadius: 19,
     backgroundColor: '#53B175',
     paddingVertical: 25,
+    marginHorizontal: 25,
+    marginVertical: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },

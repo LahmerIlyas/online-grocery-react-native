@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderTopWidth: 1,
     borderColor: '#E2E2E2',
-    paddingHorizontal: 25,
+    marginHorizontal: 25,
+    paddingVertical: 30
   },
   image: {},
   title: {
