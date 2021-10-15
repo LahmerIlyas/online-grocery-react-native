@@ -2,13 +2,17 @@ import React from 'react';
 import { View, StyleSheet, TextInput, Text } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { Icon } from '../../components';
+import {
+  SearchScreenProductCardProps,
+  SearchScreenProductCard,
+} from './components/SearchScreenProductCard';
 import { products } from './data';
 
 export const SearchScreen: React.FC = () => {
-
-const renderProductCard = useCallback(({item}) => {
-  
-}, [])
+  const renderProductCard = React.useCallback(
+    ({ item }: { item: SearchScreenProductCardProps }) => <SearchScreenProductCard {...item} />,
+    [],
+  );
 
   return (
     <View style={styles.container}>
@@ -18,7 +22,11 @@ const renderProductCard = useCallback(({item}) => {
         <TextInput style={styles.searchTextInput} placeholder={'Search store'} />
       </View>
       <FlatList
+        columnWrapperStyle={{ justifyContent: 'space-between' }}
+        contentContainerStyle={{ marginHorizontal: 25 }}
         data={products}
+        renderItem={renderProductCard}
+        numColumns={2}
       />
     </View>
   );

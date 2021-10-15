@@ -1,3 +1,5 @@
+import { SearchScreenProductCardProps } from "./components/SearchScreenProductCard";
+
 export const products = [
   {
     image: require('../../../assets/img/search-1.png'),
@@ -35,4 +37,16 @@ export const products = [
     backgroundColor: '#B7DFF540',
     borderColor: 'rgba(183, 223, 245, 1.0)',
   },
-];
+  {
+    image: require('../../../assets/img/search-5.png'),
+    title: 'Dairy & Eggs',
+    backgroundColor: '#FDE59840',
+    borderColor: 'rgba(253, 229, 152, 1.0)',
+  },
+  {
+    image: require('../../../assets/img/search-6.png'),
+    title: 'Beverages',
+    backgroundColor: '#B7DFF540',
+    borderColor: 'rgba(183, 223, 245, 1.0)',
+  },
+] as SearchScreenProductCardProps[];
