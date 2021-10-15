@@ -18,7 +18,7 @@ export const ProductDetailCard: React.FC<ProductDetailCardProps> = (props) => {
       <View style={styles.bottomSectionContainer}>
         <Text style={styles.price}>{props.price}</Text>
         <Pressable style={styles.button}>
-          <Icon style={styles.buttonIcon} />
+          <Icon style={styles.buttonIcon} color={'white'} size={15} name="plus"/>
         </Pressable>
       </View>
     </View>

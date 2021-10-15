@@ -21,13 +21,13 @@ const Stack = createStackNavigator();
 
 const BottomTabBar = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ header: () => null }}>
       <Tab.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => <Icon name="home" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Icon name="shop" color={color} size={20} />,
         }}
       />
       <Tab.Screen
@@ -35,7 +35,7 @@ const BottomTabBar = () => {
         component={ExploreScreen}
         options={{
           tabBarLabel: 'Explore',
-          tabBarIcon: ({ color, size }) => <Icon name="home" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Icon name="explore" color={color} size={20} />,
         }}
       />
       <Tab.Screen
@@ -43,7 +43,7 @@ const BottomTabBar = () => {
         component={CartScreen}
         options={{
           tabBarLabel: 'Cart',
-          tabBarIcon: ({ color, size }) => <Icon name="home" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Icon name="cart" color={color} size={20} />,
         }}
       />
       <Tab.Screen
@@ -51,7 +51,7 @@ const BottomTabBar = () => {
         component={SplashScreen}
         options={{
           tabBarLabel: 'Favorites',
-          tabBarIcon: ({ color, size }) => <Icon name="home" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Icon name="favorites" color={color} size={20} />,
         }}
       />
       <Tab.Screen
@@ -59,7 +59,7 @@ const BottomTabBar = () => {
         component={SplashScreen}
         options={{
           tabBarLabel: 'Account',
-          tabBarIcon: ({ color, size }) => <Icon name="home" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Icon name="account" color={color} size={20} />,
         }}
       />
     </Tab.Navigator>

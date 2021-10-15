@@ -11,11 +11,11 @@ export const HomeScreen: React.FC = () => {
     <ScrollView contentContainerStyle={styles.container}>
       <ColoredCarrot style={styles.coloredCarrot} />
       <View style={styles.locationContainer}>
-        <Icon size={30} color={'#4C4F4D'} />
+        <Icon name={'location'} size={25} color={'#4C4F4D'} />
         <Text style={styles.locationText}>Dhaka, Banassre</Text>
       </View>
       <View style={styles.searchInputContainer}>
-        <Icon size={30} color={'#4C4F4D'} />
+        <Icon name={'search'} size={25} color={'#4C4F4D'} />
         <TextInput style={styles.searchTextInput} placeholder={'Search store'} />
       </View>
       <BannerHeader />

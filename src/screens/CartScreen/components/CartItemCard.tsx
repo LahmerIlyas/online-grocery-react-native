@@ -16,13 +16,13 @@ export const CartItemCard: React.FC<CartItemCardProps> = (props) => {
         <Text style={styles.title}>{props.title}</Text>
         <Text style={styles.description}>{props.description}</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 13 }}>
-          <Icon style={styles.iconButton} />
+          <Text style={styles.iconButton}>-</Text>
           <Text style={styles.quantity}>1</Text>
-          <Icon style={styles.iconButton} />
+          <Icon style={styles.iconButton} name="plus" color="#53B175" />
         </View>
       </View>
       <View style={{ justifyContent: 'space-between' }}>
-        <Icon />
+        <Icon name="close" style={{ alignSelf: 'flex-end' }} />
         <Text style={styles.price}>{props.price}</Text>
       </View>
     </View>

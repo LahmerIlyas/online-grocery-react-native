@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { View, StyleSheet, Text, TextInput,FlatList } from 'react-native';
+import { View, StyleSheet, Text, TextInput, FlatList } from 'react-native';
 import { Icon } from '../../components';
 import { ProductDetailCard } from './components/ProductCard';
 import { data } from './data';
@@ -18,16 +18,16 @@ export const ExploreScreen: React.FC = () => {
           justifyContent: 'space-between',
         }}>
         <View style={styles.searchInputContainer}>
-          <Icon size={30} color={'#4C4F4D'} />
+          <Icon size={25} color={'#4C4F4D'} name={'search'} />
           <TextInput style={styles.searchTextInput} placeholder={'Search store'} />
         </View>
-        <Icon size={30} color={'#4C4F4D'} />
+        <Icon size={25} color={'#4C4F4D'} name="filters" style={{marginHorizontal: 8}}/>
       </View>
       <FlatList
         contentContainerStyle={{ paddingVertical: 25 }}
         showsVerticalScrollIndicator={false}
         data={data}
-        columnWrapperStyle={{padding: 8}}
+        columnWrapperStyle={{ padding: 8 }}
         renderItem={renderCard}
         numColumns={2}
       />

@@ -15,6 +15,7 @@ const customFonts = {
   GilroySemiBold: require('./assets/fonts/Gilroy-SemiBold.ttf'),
   GilroyMedium: require('./assets/fonts/Gilroy-Medium.ttf'),
   GilroyLight: require('./assets/fonts/Gilroy-Light.ttf'),
+  IcoMoon: require('./assets/fonts/icomoon.ttf'),
 };
 export default function App() {
   const [loaded, setLoaded] = useState<boolean>(false);
