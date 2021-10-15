@@ -13,6 +13,7 @@ import {
   ExploreScreen,
   OrderAcceptedScreen,
   CartScreen,
+  FavoritesScreen
 } from '../screens';
 import { Icon } from '../components';
 
@@ -21,7 +22,7 @@ const Stack = createStackNavigator();
 
 const BottomTabBar = () => {
   return (
-    <Tab.Navigator screenOptions={{ header: () => null }}>
+    <Tab.Navigator screenOptions={{ tabBarActiveTintColor: '#53B175', header: () => null }}>
       <Tab.Screen
         name="HomeScreen"
         component={HomeScreen}
@@ -48,7 +49,7 @@ const BottomTabBar = () => {
       />
       <Tab.Screen
         name="FavoritesScreen"
-        component={SplashScreen}
+        component={FavoritesScreen}
         options={{
           tabBarLabel: 'Favorites',
           tabBarIcon: ({ color, size }) => <Icon name="favorites" color={color} size={20} />,
