@@ -12,13 +12,13 @@ export const FavoritesCard: React.FC<FavoritesCardProps> = (props) => {
   return (
     <View style={styles.container}>
       <Image source={props.image} style={styles.image} />
-      <View style={{ marginRight: 'auto' }}>
+      <View style={{ marginRight: 'auto', marginLeft: 35 }}>
         <Text style={styles.title}>{props.title}</Text>
         <Text style={styles.description}>{props.description}</Text>
       </View>
-      <View>
+      <View style={{ flexDirection: 'row' }}>
         <Text style={styles.price}>{props.price}</Text>
-        <Icon style={styles.icon} />
+        <Icon style={styles.icon} name="arrow-right" color="black" />
       </View>
     </View>
   );
@@ -28,10 +28,26 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    borderTopWidth: 1,
+    borderColor: '#E2E2E2',
+    paddingHorizontal: 25,
   },
   image: {},
-  title: {},
-  description: {},
-  price: {},
+  title: {
+    fontFamily: 'Gilroy-Bold',
+    fontSize: 16,
+    color: '#181725',
+  },
+  description: {
+    fontFamily: 'GilroyMedium',
+    fontSize: 14,
+    color: '#7C7C7C',
+  },
+  price: {
+    fontFamily: 'GilroyMedium',
+    fontSize: 16,
+    color: '#181725',
+    marginRight: 16,
+  },
   icon: {},
 });
