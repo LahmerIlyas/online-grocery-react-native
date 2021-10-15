@@ -27,6 +27,7 @@ export const ExploreScreen: React.FC = () => {
         contentContainerStyle={{ paddingVertical: 25 }}
         showsVerticalScrollIndicator={false}
         data={data}
+        columnWrapperStyle={{padding: 8}}
         renderItem={renderCard}
         numColumns={2}
       />

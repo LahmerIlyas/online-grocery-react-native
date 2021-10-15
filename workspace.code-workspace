@@ -8,6 +8,7 @@
 		"prettier.enable": true,
 		"cSpell.words": [
 			"Pressable"
-		]
+		],
+		"editor.fontSize": 16
 	}
 }

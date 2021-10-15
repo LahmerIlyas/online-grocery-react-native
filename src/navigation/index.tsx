@@ -8,13 +8,15 @@ import {
   HomeScreen,
   ProductDetailScreen,
   SearchScreen,
-  ExploreScreen
+  ExploreScreen,
+  OrderAcceptedScreen,
 } from '../screens';
 const Stack = createStackNavigator();
 
 function MainStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="OrderAcceptedScreen" component={OrderAcceptedScreen} />
       <Stack.Screen name="ExploreScreen" component={ExploreScreen} />
       <Stack.Screen name="SearchScreen" component={SearchScreen} />
       <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} />
@@ -26,7 +28,6 @@ function MainStack() {
       <Stack.Screen name="AccountScreen" component={SplashScreen} />
       <Stack.Screen name="CartScreen" component={SplashScreen} />
       <Stack.Screen name="FavoritesScreen" component={SplashScreen} />
-      <Stack.Screen name="OrderAcceptedScreen" component={SplashScreen} />
     </Stack.Navigator>
   );
 }
